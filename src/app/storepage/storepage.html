@@ -15,7 +15,7 @@
         <div class="nav-left">
           <a class="navbar-brand" href="index.html">
             <img
-              src="../../Images/CaravanLogo_Transparent.png"
+              src="../Images/CaravanLogo_Transparent.png"
               alt="Caravan"
               height="60"
               id="Caravan_Logo"
@@ -147,14 +147,25 @@
                     <!-- 
                     Product items will be dynamically inserted here 
                      -->
+                    <form class="search-container" id="Searchbar">
+                        <input type="text" class="searchbar" placeholder="Search for products..." id="searchInput">
+                        <button class="searchbtn" style="font-size: 1.5rem; width: 50px; height: 50px;" onclick="SearchProducts()">⌕</button>
+                    </form>
                      <h1>Products</h1>
                      <div class="product-section">
                         <!-- Product cards are inserted here, just connect to database to change placeholder info -->
+                        <div class="noitem-container" style="display: none;">
+                        <div class="noitem-content">
+                            <img src="../Images/ItemNotFound_nobg.png" alt="NoItemImg" class="noitem-image">
+                            <h1>Sorry, we couldn't find any products matching your search.</h1>
+                        </div>
+                        </div>
+                        
                         <div class="product-card">
                             <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
                             alt="PaprikaImg" class="product-image">
                             <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
+                                <h3 id="product-name">Paprika</h3>
                                 <p id="product-price">₱99.99/oz.</p>
                             </div>
                         </div>
@@ -162,7 +173,7 @@
                             <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
                             alt="PaprikaImg" class="product-image">
                             <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
+                                <h3 id="product-name">Black Pepper</h3>
                                 <p id="product-price">₱99.99/oz.</p>
                             </div>
                         </div>
@@ -170,7 +181,7 @@
                             <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
                             alt="PaprikaImg" class="product-image">
                             <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
+                                <h3 id="product-name">Bird's Eye Chili</h3>
                                 <p id="product-price">₱99.99/oz.</p>
                             </div>
                         </div>
@@ -178,7 +189,7 @@
                             <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
                             alt="PaprikaImg" class="product-image">
                             <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
+                                <h3 id="product-name">Cayenne Pepper</h3>
                                 <p id="product-price">₱99.99/oz.</p>
                             </div>
                         </div>
@@ -186,79 +197,7 @@
                             <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
                             alt="PaprikaImg" class="product-image">
                             <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
-                                <p id="product-price">₱99.99/oz.</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://www.allrecipes.com/thmb/S2m8CUhUXLWIWR5Lgv8RcO6fG5Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-paprika-vs-smoked-paprika-VAT-4x3-6b963c83256040c99ff4011818bfa509.jpg" 
-                            alt="PaprikaImg" class="product-image">
-                            <div class="product-info">
-                                <h3 id="product-name">Placeholder name</h3>
+                                <h3 id="product-name">Salt</h3>
                                 <p id="product-price">₱99.99/oz.</p>
                             </div>
                         </div>
