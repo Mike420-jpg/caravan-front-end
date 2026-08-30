@@ -1,3 +1,14 @@
+/* Foants Imported */
+@font-face {
+  font-family: EncodeSans_GC; /* Font Name */
+  src: url(../Fonts/EncodeSans_SC/EncodeSansSC-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Merriweather; /* Font Name */
+  src: url(../Fonts/Merriweather/Merriweather_120pt-SemiBold.ttf);
+}
+
 :root {
     --color-primary: #6F4E37;
     --color-secondary: #FFF6EC;
@@ -60,6 +71,7 @@
 
 /* Right navigation items */
 .nav-item2 .nav-link {
+  font-family: EncodeSans_GC;
   color: white;
   display: flex;
   justify-content: center;
@@ -68,6 +80,7 @@
 }
 
 .nav-item1 .nav-link {
+  font-family: EncodeSans_GC;
   color: white;
   width: 80px;
 }
@@ -149,8 +162,8 @@
 
 .product-grid {
   padding: 20px;
-  display: grid;
-  width: 100%;
+  margin-left: 200px;
+  width: calc(100% - 200px);
   padding-top: 140px;
 }
 
@@ -164,7 +177,7 @@
   gap: 15px;
   position: fixed;
   top: 100px;
-  left: 0;
+  left: 200px;
   right: 0;
   background-color: var(--color-secondary);
   padding: 10px 20px;
@@ -208,7 +221,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap:60px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .noitem-container {
@@ -233,6 +246,7 @@
 
 /* Product cards */
 .product-card {
+    font-family: EncodeSans_GC;
     background-color: var(--color-primary);
     padding: 5px 10px 5px 10px;
     width: 230px;
@@ -304,22 +318,53 @@
 
 /* Media for Mobile Adaptivity */ /*Purpose: To not ruin desktop screen while also fixing mobile view*/
 @media (max-width: 768px) {
+
+  .function-bar {
+    left: 0;
+  }
+
+  .product-grid {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+    padding-top: 140px;
+  }
+
+  /* Your existing mobile CSS below */
+  
   .hamburger-menu {
     display: flex;
   }
 
-  .navbar-nav {
+  .nav-center {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-right {
+    margin-left: 0;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-item1,
+  .nav-item2 {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav-item1 .nav-link,
+  .nav-item2 .nav-link {
     width: 100%;
     text-align: center;
-  }
-
-  .nav-item {
-    display: flex;
-    justify-content: center;
-  }
-
-  .nav-link {
-    width: auto;
   }
 
   .vertical-navbar {
@@ -334,10 +379,6 @@
   }
 
   .vertical-navbar.active {
-    left: 0;
-  }
-
-  .function-bar {
     left: 0;
   }
 
@@ -367,59 +408,5 @@
 
   .searchbtn {
     margin-top: 10px;
-  }
-
-  .product-grid {
-    padding: 10px;
-    padding-top: 140px;
-  }
-  }
-
-
-/* Extra small devices (phones) */
-@media (max-width: 480px) {
-  #Caravan_Logo {
-    height: 40px !important;
-  }
-
-  .hamburger-menu span {
-    width: 20px;
-    height: 2px;
-    margin: 4px 0;
-  }
-
-  .vertical-navbar {
-    width: 220px;
-    left: -220px;
-  }
-
-  .navbar {
-    padding: 5px 0;
-  }
-
-  .product-card {
-    width: 100%;
-    max-width: 150px;
-  }
-
-  .product-section {
-    gap: 15px;
-  }
-
-  .searchbar {
-    width: 80%;
-    font-size: 14px;
-  }
-
-  .product-info h3 {
-    font-size: 14px;
-  }
-
-  .product-info p {
-    font-size: 12px;
-  }
-
-  .product-grid {
-    padding-top: 140px;
   }
 }
