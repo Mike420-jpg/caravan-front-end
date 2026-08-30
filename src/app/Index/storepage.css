@@ -1,0 +1,13 @@
+:root {
+    --color-primary: #765139;
+    --color-secondary: #FFF6EC;
+    --color-tertiary: #FFFFFF;
+}
+
+.body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: var(--color-primary);
+}
