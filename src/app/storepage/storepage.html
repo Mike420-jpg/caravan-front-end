@@ -70,6 +70,9 @@
       </div>
     </nav>
 
+    <!-- Overlay for mobile menu -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleCategoryMenu()"></div>
+
     <!-- Bootstrap JavaScript-->
 
     <div class="main-contents">
@@ -150,6 +153,12 @@
         <!-- 
                     Product items will be dynamically inserted here 
                      -->
+        <div class="function-bar">
+        <button class="hamburger-menu" id="categoryMenuToggle" onclick="toggleCategoryMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <form class="search-container" id="Searchbar">
           <input
             type="text"
@@ -165,6 +174,8 @@
             ⌕
           </button>
         </form>
+
+        </div>
         <h1>Products</h1>
         <div class="product-section">
           <!-- Product cards are inserted here, just connect to database to change placeholder info -->

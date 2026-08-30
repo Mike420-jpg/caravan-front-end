@@ -1,3 +1,13 @@
+function toggleCategoryMenu() {
+    const sidebar = document.querySelector(".vertical-navbar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const hamburger = document.getElementById("categoryMenuToggle");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    hamburger.classList.toggle("active");
+}
+
 function toggleSubcategories(element) {
     const subcategories = element.nextElementSibling;
     const arrow = element.querySelector(".toggle-icon");
