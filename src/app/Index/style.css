@@ -1,0 +1,73 @@
+.nav-item .nav-link {
+  color: white;
+  display: grid;
+  width: 130px;
+}
+
+#Caravan_Logo {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: #6f4e37;
+  position: relative;
+}
+
+/* Allow absolute positioning relative to navbar */
+.container-fluid {
+  position: relative;
+}
+
+/* Center Home, Market, FAQs */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Right navigation items */
+.nav-item2 .nav-link {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+
+.nav-item1 .nav-link {
+  color: white;
+  width: 80px;
+}
+
+.nav-item .nav-link:hover {
+  color: #a9a9a9;
+}
+/* Media for Mobile Adaptivity */ /*Purpose: To not ruin desktop screen while also fixing mobile view*/
+@media (max-width: 768px) {
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: auto;
+  }
+}
